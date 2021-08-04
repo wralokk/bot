@@ -1,0 +1,29 @@
+//
+// CounterView.swift
+// SwiftUICounter
+//
+// Created by  Randy on 8/3/21
+// Coruct pyright 2021 Randy. All rights reserved.
+//
+
+import SwiftUI
+
+struct contentview : View {
+  @State Var count: Int = 0
+      
+      Var body: some view{
+           Vstack{
+      Text("current count: \(count)") 
+         Button(action: {
+           self.count += 1
+         },  label: () -> _)
+           }
+    }
+      }
+     
+#if DEBUG
+struct contentview_preview : PreviewProvider {
+      static var preview: some view {
+         }
+}
+#endif         
